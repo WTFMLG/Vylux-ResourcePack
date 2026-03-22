@@ -1,0 +1,41 @@
+# src/main/resources/config.yml
+debug: false
+
+# URL к .zip ресурс-пака (обязательно)
+resource-pack-url: "https://example.com/resourcepacks/vylux.zip"
+
+# UUID ресурс-пака (сгенерируй один раз и меняй при обновлении пакета)
+resource-pack-uuid: "11111111-2222-3333-4444-555555555555"
+
+# SHA-1 хеш zip (40 hex) — опционально, рекомендуется
+resource-pack-hash: ""
+
+# Название мира или список миров, в которых действует ресурс-пак
+# Поддерживаются оба формата:
+# world: "vylux_world"
+# или
+# world:
+#  - "vylux_world"
+#  - "vylux_two"
+world:
+  - "vylux_world"
+  - "vylux_two"
+
+# Требовать ли установку пакета
+force: false
+
+# Команда, выполняемая если игрок отказался или была ошибка
+# Команда выполняется от имени консоли; поддерживаются плейсхолдеры %player% и %world%
+command-noresource: "spawn %player%"
+
+# URL для удаления/замены пакета на старых runtime без removeResourcePack(UUID)
+remove-pack-url: ""
+
+messages:
+  prompt: "&aУстановите ресурс-пак для миров &e%world%"
+  accepted: "&aРесурс-пак успешно установлен"
+  declined: "&cВы отказались от установки ресурс-пака"
+  error: "&cНе удалось установить ресурс-пак"
+  removed: "&eРесурс-пак отключён"
+  reload: "&aКонфигурация перезагружена."
+  reload-no-perm: "&cУ вас нет прав на выполнение этой команды."

@@ -1,0 +1,16 @@
+# src/main/resources/plugin.yml
+name: Vylux-ResourcePack
+main: com.vylux.vyluxresourcepack.VyluxResourcePack
+version: 2.0.0
+api-version: "1.19"
+description: Resource pack per-world manager
+
+commands:
+  vrp:
+    description: Main command for Vylux ResourcePack (reload config)
+    usage: /vrp reload
+
+permissions:
+  vylux.rp.admin:
+    description: Allows using /vrp reload
+    default: op
